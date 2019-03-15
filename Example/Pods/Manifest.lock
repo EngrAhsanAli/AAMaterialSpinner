@@ -1,0 +1,16 @@
+PODS:
+  - AAMaterialSpinner (0.1.0)
+
+DEPENDENCIES:
+  - AAMaterialSpinner (from `../`)
+
+EXTERNAL SOURCES:
+  AAMaterialSpinner:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AAMaterialSpinner: 861dca98a56ff072ca4b843418f6fb236028b627
+
+PODFILE CHECKSUM: f4ebc23fbc6d5d93dbaae9c5078b95b340c72a63
+
+COCOAPODS: 1.5.3

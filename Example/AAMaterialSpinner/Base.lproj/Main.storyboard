@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="AAMaterialSpinner_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIg-8u-Ytk">
+                                <rect key="frame" x="16" y="138" width="343" height="128"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUV-Am-vfe">
+                                <rect key="frame" x="142" y="387" width="91" height="30"/>
+                                <state key="normal" title="Start Spinner"/>
+                                <connections>
+                                    <action selector="start:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fM7-dx-7vg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eu7-52-1J8">
+                                <rect key="frame" x="143" y="425" width="89" height="30"/>
+                                <state key="normal" title="Stop Spinner"/>
+                                <connections>
+                                    <action selector="stop:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FYV-7f-1fk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccL-El-krb">
+                                <rect key="frame" x="80" y="465" width="215" height="30"/>
+                                <state key="normal" title="Present On this View Controller"/>
+                                <connections>
+                                    <action selector="popup:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TsX-ga-m7t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VIg-8u-Ytk" firstAttribute="centerX" secondItem="VUV-Am-vfe" secondAttribute="centerX" id="48G-BN-BYg"/>
+                            <constraint firstAttribute="bottom" secondItem="VIg-8u-Ytk" secondAttribute="bottom" constant="401" id="5YO-1y-iH7"/>
+                            <constraint firstItem="VUV-Am-vfe" firstAttribute="centerX" secondItem="Eu7-52-1J8" secondAttribute="centerX" id="FCK-4Y-4au"/>
+                            <constraint firstItem="VIg-8u-Ytk" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="IZd-oF-N6R"/>
+                            <constraint firstItem="VIg-8u-Ytk" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="118" id="LtL-Hj-sWP"/>
+                            <constraint firstItem="ccL-El-krb" firstAttribute="top" secondItem="Eu7-52-1J8" secondAttribute="bottom" constant="10" id="MY4-fr-wDf"/>
+                            <constraint firstItem="ccL-El-krb" firstAttribute="centerX" secondItem="Eu7-52-1J8" secondAttribute="centerX" id="RHK-Aj-bJR"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ccL-El-krb" secondAttribute="bottom" constant="172" id="WM8-7o-R3U"/>
+                            <constraint firstItem="Eu7-52-1J8" firstAttribute="top" secondItem="VUV-Am-vfe" secondAttribute="bottom" constant="8" symbolic="YES" id="YrF-XJ-ZYr"/>
+                            <constraint firstItem="VIg-8u-Ytk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="jY0-Vt-0Fe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingView" destination="VIg-8u-Ytk" id="0DY-Gc-I7x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
