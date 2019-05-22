@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,6 +46,13 @@
                                     <action selector="popup:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TsX-ga-m7t"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEj-sv-bn4">
+                                <rect key="frame" x="80" y="503" width="204" height="30"/>
+                                <state key="normal" title="Add to current view controller"/>
+                                <connections>
+                                    <action selector="addToCurrentAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eu0-i4-A8g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -55,10 +62,12 @@
                             <constraint firstItem="VIg-8u-Ytk" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="IZd-oF-N6R"/>
                             <constraint firstItem="VIg-8u-Ytk" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="118" id="LtL-Hj-sWP"/>
                             <constraint firstItem="ccL-El-krb" firstAttribute="top" secondItem="Eu7-52-1J8" secondAttribute="bottom" constant="10" id="MY4-fr-wDf"/>
+                            <constraint firstItem="qEj-sv-bn4" firstAttribute="leading" secondItem="ccL-El-krb" secondAttribute="leading" id="NO5-yH-Kut"/>
                             <constraint firstItem="ccL-El-krb" firstAttribute="centerX" secondItem="Eu7-52-1J8" secondAttribute="centerX" id="RHK-Aj-bJR"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ccL-El-krb" secondAttribute="bottom" constant="172" id="WM8-7o-R3U"/>
                             <constraint firstItem="Eu7-52-1J8" firstAttribute="top" secondItem="VUV-Am-vfe" secondAttribute="bottom" constant="8" symbolic="YES" id="YrF-XJ-ZYr"/>
                             <constraint firstItem="VIg-8u-Ytk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="jY0-Vt-0Fe"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="qEj-sv-bn4" secondAttribute="bottom" constant="134" id="y2D-Dm-w9r"/>
+                            <constraint firstItem="qEj-sv-bn4" firstAttribute="top" secondItem="ccL-El-krb" secondAttribute="bottom" constant="8" symbolic="YES" id="y5K-vx-Q0k"/>
                         </constraints>
                     </view>
                     <connections>

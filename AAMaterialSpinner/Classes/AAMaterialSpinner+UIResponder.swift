@@ -28,7 +28,19 @@ public extension UIResponder {
         }
     }
     
-    private var aa_ms_vc: UIViewController? {
+    var aa_ms_view: UIView {
+        get {
+            if let view = objc_getAssociatedObject(self, &AssociatedSpinnerHandle) as? UIView {
+                return view
+            }
+            return UIView()
+        }
+        set {
+            objc_setAssociatedObject(self, &AssociatedSpinnerHandle, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    var aa_ms_vc: UIViewController? {
         get {
             if let spinner = objc_getAssociatedObject(self, &AssociatedVCHandle) as? UIViewController {
                 return spinner
@@ -41,7 +53,7 @@ public extension UIResponder {
     }
     
     @discardableResult
-    public func aa_vc_material_spinner( bgColor: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5),
+    func aa_vc_material_spinner( bgColor: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5),
                                         size: CGFloat = 50) -> UIViewController {
         
         let vc = UIViewController()
@@ -55,7 +67,7 @@ public extension UIResponder {
         return vc
     }
     
-    public func aa_present_material_spinner(_ vc: UIViewController? = nil) {
+    func aa_present_material_spinner(_ vc: UIViewController? = nil) {
         
         guard let materialSpinner = aa_ms_vc else { return }
         let presenter = (vc ?? rootViewController)
@@ -64,10 +76,12 @@ public extension UIResponder {
         })
     }
     
-    public func aa_dismiss_material_spinner(_ vc: UIViewController? = nil, completion: (() -> ())? = nil) {
+    func aa_dismiss_material_spinner(_ completion: (() -> ())? = nil) {
         aa_ms_vc?.aa_ms.endRefreshing()
         aa_ms_vc?.dismiss(animated: true, completion: completion)
     }
-    
+
 }
+
+
 

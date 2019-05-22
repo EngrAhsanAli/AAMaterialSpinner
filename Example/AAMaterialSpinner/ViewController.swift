@@ -29,8 +29,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func popup(_ sender: Any) {
-        
-        
         let vc = aa_vc_material_spinner(size: 100)
         vc.aa_ms.circleLayer.lineWidth = 2.0
         vc.aa_ms.circleLayer.strokeColor = UIColor.blue.cgColor
@@ -41,6 +39,14 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func addToCurrentAction(_ sender: Any) {
+        AAMaterialSpinner.show()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            AAMaterialSpinner.dismiss()
+        }
+        
+    }
     
     @IBAction func start(_ sender: Any) {
         self.aa_ms.beginRefreshing()
