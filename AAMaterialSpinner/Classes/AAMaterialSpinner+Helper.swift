@@ -12,7 +12,7 @@ var AssociatedVCHandle: UInt8 = 0
 
 public extension UIView {
     
-    func addMaterialSpinner(size: CGFloat = 50) -> AAMaterialSpinner {
+    func addMaterialSpinner(size: CGFloat = 70) -> AAMaterialSpinner {
         let spinnerView = AAMaterialSpinner()
         spinnerView.translatesAutoresizingMaskIntoConstraints = false
         

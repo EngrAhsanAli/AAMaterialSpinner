@@ -5,6 +5,7 @@
 //  Created by MacBook Pro on 15/03/2019.
 //
 
+import UIKit
 
 public extension UIResponder {
     
@@ -22,18 +23,6 @@ public extension UIResponder {
                 return spinner
             }
             return AAMaterialSpinner()
-        }
-        set {
-            objc_setAssociatedObject(self, &AssociatedSpinnerHandle, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
-    
-    var aa_ms_view: UIView {
-        get {
-            if let view = objc_getAssociatedObject(self, &AssociatedSpinnerHandle) as? UIView {
-                return view
-            }
-            return UIView()
         }
         set {
             objc_setAssociatedObject(self, &AssociatedSpinnerHandle, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)

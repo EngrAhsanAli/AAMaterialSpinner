@@ -151,42 +151,6 @@ open class AAMaterialSpinner: UIView {
         self.circleLayer.removeAnimation(forKey: "animations")
     }
     
-}
-
-public extension AAMaterialSpinner {
-    
-    class func show( bgColor: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5),
-                                         size: CGFloat = 50, onViewController: UIViewController? = nil) {
-        
-        guard let keyWindow = UIApplication.shared.keyWindow, let rootViewController = keyWindow.rootViewController else {
-            fatalError("AAMaterialSpinner - Application key window not found. Please check UIWindow in AppDelegate.")
-        }
-        
-        let vc = onViewController ?? rootViewController
-        let mask: UIView = {
-            let view = UIView()
-            view.backgroundColor = bgColor
-            view.frame = keyWindow.frame
-            vc.view.addSubview(view)
-            return view
-        }()
-        
-        let materialSpinner = mask.addMaterialSpinner(size: size)
-        materialSpinner.beginRefreshing()
-        vc.aa_ms = materialSpinner
-        vc.aa_ms_view = mask
-        rootViewController.aa_ms_vc = vc
-        
-    }
-    
-    
-    class func dismiss() {
-        guard let keyWindow = UIApplication.shared.keyWindow, let rootViewController = keyWindow.rootViewController, let vc = rootViewController.aa_ms_vc else {
-            fatalError("AAMaterialSpinner - Application key window not found. Please check UIWindow in AppDelegate.")
-        }
-        vc.aa_ms.endRefreshing()
-        vc.aa_ms_view.removeFromSuperview()
-    }
-
     
 }
+

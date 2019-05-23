@@ -21,8 +21,17 @@ class ViewController: UIViewController {
         self.aa_ms.colorArray = [.blue, .red, .orange]
         self.aa_ms.circleLayer.lineWidth = 3.0
         
+        // MASKED SPINNER VIEW
+        
+        
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        let spinner = AAMaterialSpinner.setMaskedSpinnerView(bgColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5), spinnerSize: 100)
+        spinner.circleLayer.lineWidth = 3.0
+        spinner.circleLayer.strokeColor = UIColor.cyan.cgColor
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -40,10 +49,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addToCurrentAction(_ sender: Any) {
-        AAMaterialSpinner.show()
+        
+        AAMaterialSpinner.showMaskedSpinner(self)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            AAMaterialSpinner.dismiss()
+            AAMaterialSpinner.dismissMaskedSpinner()
         }
         
     }

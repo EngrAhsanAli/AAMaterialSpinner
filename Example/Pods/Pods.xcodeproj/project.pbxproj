@@ -19,6 +19,7 @@
 		8ADD72D23C07B2C1AFFB2ED4F163CC82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		96D63FE266AB697DFA8776D8FE62E4ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		C21BE631B6F2C59DDF134F7407E4D3FB /* AAMaterialSpinner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6036B500E84A3301A927493D64B1C48B /* AAMaterialSpinner-dummy.m */; };
+		FA531E0B2297454300451B97 /* AAMaterialSpinner+Masked.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA531E0A2297454300451B97 /* AAMaterialSpinner+Masked.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		F0A187301274AA3A253494B75D9A494D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F55BB45A100C962A260C0D61A65402C3 /* AAMaterialSpinner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AAMaterialSpinner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F567CBF6869B06A2ABF41F6B148389C4 /* Pods-AAMaterialSpinner_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AAMaterialSpinner_Tests-umbrella.h"; sourceTree = "<group>"; };
+		FA531E0A2297454300451B97 /* AAMaterialSpinner+Masked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AAMaterialSpinner+Masked.swift"; sourceTree = "<group>"; };
 		FDC1A16AEE7E15926ED790FC980D1182 /* Pods-AAMaterialSpinner_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AAMaterialSpinner_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 				521F5E18223C08D0009F02A5 /* AAMaterialSpinner.swift */,
 				521F5E19223C08D0009F02A5 /* AAMaterialSpinner+Helper.swift */,
 				521F5E1A223C08D0009F02A5 /* AAMaterialSpinner+UIResponder.swift */,
+				FA531E0A2297454300451B97 /* AAMaterialSpinner+Masked.swift */,
 			);
 			name = Classes;
 			path = AAMaterialSpinner/Classes;
@@ -391,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA531E0B2297454300451B97 /* AAMaterialSpinner+Masked.swift in Sources */,
 				521F5E1B223C08D0009F02A5 /* AAMaterialSpinner.swift in Sources */,
 				521F5E1D223C08D0009F02A5 /* AAMaterialSpinner+UIResponder.swift in Sources */,
 				521F5E1C223C08D0009F02A5 /* AAMaterialSpinner+Helper.swift in Sources */,
