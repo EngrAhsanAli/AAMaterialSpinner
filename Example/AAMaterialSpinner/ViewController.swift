@@ -21,12 +21,10 @@ class ViewController: UIViewController {
         self.aa_ms.colorArray = [.blue, .red, .orange]
         self.aa_ms.circleLayer.lineWidth = 3.0
         
-        // MASKED SPINNER VIEW
-        
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        // MASKED SPINNER VIEW
         let spinner = AAMaterialSpinner.setMaskedSpinnerView(bgColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5), spinnerSize: 100)
         spinner.circleLayer.lineWidth = 3.0
         spinner.circleLayer.strokeColor = UIColor.cyan.cgColor
